@@ -1,0 +1,18 @@
+@baseUrl = http://localhost:3000
+
+GET {{baseUrl}}/tasks
+Content-Type: application/json
+
+###
+
+GET {{baseUrl}}/tasks/1e7f7da6-d6fe-462a-8073-07f53b2d80b0
+Content-Type: application/json
+
+###
+
+POST {{baseUrl}}/tasks
+Content-Type: application/json
+
+{
+    "title": "fazer cafe"
+}

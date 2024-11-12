@@ -1,0 +1,16 @@
+enum Status {
+    PENDING
+    DONE
+    CANCELED
+}
+
+model Task {
+    id        String    @id @default(uuid())
+    title     String
+    content   String?
+    status    Status    @default(PENDING)
+    createdAt DateTime  @default(now()) @map("created_at")
+    updatedAt DateTime? @updatedAt() @map("updated_at")
+
+    @@map("tasks")
+}
